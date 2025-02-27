@@ -5,7 +5,7 @@
       "src": "package.json",
       "use": "@vercel/node",
       "config": {
-        "installCommand": "npm install && npx playwright install chromium"
+        "installCommand": "apt-get update && apt-get install -y libnss3 libnspr4 libgbm1 && npm install && npx playwright install chromium"
       }
     }
   ],

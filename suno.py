@@ -47,7 +47,7 @@ def generate_whole_song(clip_id):
 
 if __name__ == '__main__':
     data = generate_audio_by_prompt({
-        "prompt": "A haunting rock ballad about lost love, performed by a raspy male vocalist with emotional intensity. The lyrics tell the story of memories fading like autumn leaves.",
+        "prompt": "A popular heavy metal song about war, sung by a deep-voiced male singer, slowly and melodiously. The lyrics depict the sorrow of people after the war.",
         "make_instrumental": False,
         "model": "chirp-v4",
         "wait_audio": False
@@ -64,8 +64,6 @@ if __name__ == '__main__':
             print(f"Track {idx+1}:")
             print(f"  Status: {item['status']}")
             print(f"  ID: {item['id']}")
-            if 'title' in item and item['title']:
-                print(f"  Title: {item['title']}")
             if item['audio_url']:
                 print(f"  Audio URL: {item['audio_url']}")
             else:
